@@ -1,1 +1,1 @@
-(já é a versaõ final, mas detalhes)
+(já é a versão final, mas detalhes)
