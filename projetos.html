@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos e Serviços — Studio CASA02 // Sousa/PB</title>
+  <meta name="description" content="Portfólio de projetos residenciais, comerciais, interiores e urbanismo do Studio CASA02 em Sousa/PB. Conheça nossa metodologia de projeto e modelagem 3D.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="surface-bone">
+
+  <!-- HEADER GLOBAL -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Studio CASA02 Início">
+        Studio CASA02
+        <span>Arquitetura, Interiores e Urbanismo</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+      <nav id="main-nav" aria-label="Navegação principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="projetos.html" class="nav-link active">Projetos e Serviços</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="https://wa.me/5583999999999?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20os%20projetos%20do%20Studio%20CASA02." 
+           class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <section class="section-hero">
+      <div class="container-pad">
+        <span class="section-tagline">Portfólio & Metodologia Técnica</span>
+        <h1 class="display-title">Nosso Portfólio & Serviços</h1>
+        <p class="body-intro" style="max-width: 800px; margin-top: 14px;">
+          Conheça nosso trabalho e entenda como conduzimos seu projeto do conceito ao detalhamento.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERIA DE PORTFÓLIO COM FILTROS -->
+    <section class="section">
+      <div class="container-pad">
+        <!-- Filtros de Categoria -->
+        <div class="filter-bar" role="toolbar" aria-label="Filtro de categorias de projetos">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="residencial">Residencial</button>
+          <button class="filter-btn" data-filter="comercial-interiores">Comercial & Interiores</button>
+          <button class="filter-btn" data-filter="urbanismo">Urbanismo</button>
+        </div>
+
+        <!-- Grid de Portfólio -->
+        <div class="portfolio-grid" id="portfolio-container">
+          <!-- Card 1 -->
+          <article class="portfolio-item" data-category="residencial">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Residencial Contemporâneo Sousa/PB" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Residencial Contemporâneo</h3>
+              <span class="portfolio-cat">Residencial — Sousa/PB</span>
+            </div>
+            <p class="caption">Estudo volumétrico com foco em ventilação cruzada, iluminação natural e materiais autênticos.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="portfolio-item" data-category="comercial-interiores">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Ambientes Corporativos & Comerciais Sousa/PB" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Ambientes Corporativos & Comerciais</h3>
+              <span class="portfolio-cat">Comercial & Interiores — Sousa/PB</span>
+            </div>
+            <p class="caption">Projeto de fachada e distribuição espacial para fortalecimento de marca e fluxo otimizado de clientes.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="portfolio-item" data-category="comercial-interiores">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Detalhamento de Interiores & Marcenaria Sousa/PB" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Detalhamento de Interiores & Marcenaria</h3>
+              <span class="portfolio-cat">Comercial & Interiores — Sousa/PB</span>
+            </div>
+            <p class="caption">Solução sob medida de mobiliário em marcenaria nobre, iluminação embutida e paleta aconchegante.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="portfolio-item" data-category="urbanismo">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Soluções e Planejamento Urbanístico Sousa/PB" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Soluções e Planejamento Urbanístico</h3>
+              <span class="portfolio-cat">Urbanismo — Sousa/PB</span>
+            </div>
+            <p class="caption">Adequação topográfica, diretrizes viárias e ocupação inteligente do lote em conformidade regulatória.</p>
+          </article>
+
+          <!-- Card 5 (Complementar Residencial) -->
+          <article class="portfolio-item" data-category="residencial">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Casa Pátio — Sousa/PB" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Casa Pátio Residencial</h3>
+              <span class="portfolio-cat">Residencial — Sousa/PB</span>
+            </div>
+            <p class="caption">Modelagem 3D prévia aprovada pelo proprietário antes do início do canteiro de obras.</p>
+          </article>
+
+          <!-- Card 6 (Complementar Interiores) -->
+          <article class="portfolio-item" data-category="comercial-interiores">
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Cozinha Integrada e Área Gourmet Sousa/PB" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Área Social e Gourmet Integrada</h3>
+              <span class="portfolio-cat">Comercial & Interiores — Sousa/PB</span>
+            </div>
+            <p class="caption">Harmonização entre pedra natural, madeira e metalurgia com especificações executivas prontas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS DETALHADOS (Etapas do Projeto) -->
+    <section class="section">
+      <div class="container-pad">
+        <div class="hero-content" style="margin-bottom: 30px;">
+          <div>
+            <span class="section-tagline">Metodologia Passo a Passo</span>
+            <h2 class="display-title" style="font-size: clamp(30px, 4vw, 44px);">Como trabalhamos para garantir o sucesso da sua obra</h2>
+          </div>
+          <div>
+            <p class="display-subheading">Processo estruturado para você ter segurança orçamentária e total clareza antes de construir.</p>
+          </div>
+        </div>
+
+        <div class="editorial-grid-2">
+          <article class="editorial-card">
+            <span class="editorial-card-number">ETAPA 01</span>
+            <h3>Concepção & Briefing</h3>
+            <p>Entendemos seu estilo de vida, necessidades funcionais e diretrizes orçamentárias. Realizamos um levantamento minucioso do lote ou imóvel e alinhamos as expectativas para construir um programa de necessidades preciso.</p>
+          </article>
+
+          <article class="editorial-card">
+            <span class="editorial-card-number">ETAPA 02</span>
+            <h3>Modelagem 3D & Estudo Preliminar</h3>
+            <p>Apresentação realista do espaço em 3D para você aprovar materiais, cores e volumes com total clareza. Você caminha virtualmente pelos cômodos antes de qualquer intervenção física.</p>
+          </article>
+
+          <article class="editorial-card">
+            <span class="editorial-card-number">ETAPA 03</span>
+            <h3>Detalhamento Técnico & Interiores</h3>
+            <p>Elaboração dos projetos executivos completos: marcenaria, iluminação, pontos elétricos e hidráulicos e especificação exata de acabamentos para os mestres de obras e instaladores.</p>
+          </article>
+
+          <article class="editorial-card">
+            <span class="editorial-card-number">ETAPA 04</span>
+            <h3>Soluções Urbanísticas & Acompanhamento</h3>
+            <p>Orientações para adequação espacial e acompanhamento do cumprimento do projeto. Asseguramos que o que foi desenhado e aprovado seja executado com rigor e fidelidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA DE CONVERSÃO DA PÁGINA (Rust Section Panel) -->
+    <section class="panel-rust">
+      <div class="panel-rust-inner">
+        <div>
+          <span class="section-tagline" style="opacity: 0.9;">Inicie seu Projeto</span>
+          <h2 class="display-title" style="font-size: clamp(32px, 4.5vw, 48px); margin-bottom: 20px;">
+            Quer transformar seu lote ou imóvel em um projeto de alto valor?
+          </h2>
+          <p class="body-intro" style="margin-bottom: 24px;">
+            Fale conosco para apresentar suas ideias e receber um direcionamento sob medida.
+          </p>
+        </div>
+
+        <div style="align-self: center;">
+          <a href="https://wa.me/5583999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20de%20projeto%20com%20o%20Studio%20CASA02." 
+             class="btn btn-primary" target="_blank" rel="noopener noreferrer">Agendar Reunião de Projeto</a>
+          <div style="margin-top: 14px;">
+            <a href="contato.html" class="link-editorial">Ou preencha o formulário institucional &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 16px;">
+          Studio CASA02
+          <span>Arquitetura, Interiores e Urbanismo</span>
+        </div>
+        <p class="body-text" style="max-width: 440px; margin-bottom: 16px;">
+          Desenvolvimento de projetos residenciais, comerciais, detalhamento de interiores e planejamento urbano com identidade e rigor técnico.
+        </p>
+        <p class="body-text">
+          <strong>Endereço:</strong> R. Cel. Antônio Soares, 20 - Centro – Sousa/PB
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos e Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Conexão</h4>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/casa02arquitetura" target="_blank" rel="noopener noreferrer">Instagram (@casa02arquitetura)</a></li>
+          <li><a href="https://wa.me/5583999999999" target="_blank" rel="noopener noreferrer">WhatsApp Oficial</a></li>
+          <li><a href="contato.html">Solicitar Orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Studio CASA02. Todos os direitos reservados.</div>
+      <div>Sousa, Paraíba — Brasil</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

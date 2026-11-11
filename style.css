@@ -1,0 +1,798 @@
+/* ==========================================================================
+   MANNA DESIGN SYSTEM SPECIFICATION — STUDIO CASA02
+   Architecture monograph at golden hour: bone canvas, rust panels, ink typography.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@300;500&display=swap');
+
+:root {
+  /* Colors */
+  --color-bone: #f2edde;
+  --color-rust: #af6446;
+  --color-ink: #000000;
+
+  /* Typography — Font Families (Space Grotesk & Inter as specified in design system) */
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale & Leading */
+  --text-caption: 14px;
+  --leading-caption: 1.29;
+  --text-body-sm: 16px;
+  --leading-body-sm: 1.5;
+  --text-subheading: 26px;
+  --leading-subheading: 1.23;
+  --text-display: clamp(36px, 5.5vw, 60px);
+  --leading-display: 1.15;
+
+  /* Typography — Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* Spacing Scale */
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-20: 20px;
+  --section-gap: 60px;
+
+  /* Border Radii — Strictly 0px (Editorial system) */
+  --radius-images: 0px;
+  --radius-buttons: 0px;
+  --radius-containers: 0px;
+
+  /* Hairlines */
+  --border-hairline: 1px solid var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   CSS Reset & Strict Monograph Rules
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Non-negotiable editorial rule */
+  box-shadow: none !important;  /* Deliberately flat surfaces */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body-sm);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   Surfaces
+   -------------------------------------------------------------------------- */
+.surface-bone {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+}
+
+.surface-rust {
+  background-color: var(--color-rust);
+  color: var(--color-ink);
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Typography Styles
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.display-title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  font-weight: var(--font-weight-medium);
+}
+
+.display-subheading {
+  font-family: var(--font-body);
+  font-size: var(--text-subheading);
+  line-height: var(--leading-subheading);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-intro {
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.35;
+  font-weight: var(--font-weight-regular);
+}
+
+.body-text {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body-sm);
+}
+
+.caption {
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  color: var(--color-ink);
+  margin-top: var(--spacing-10);
+  display: block;
+}
+
+/* Section Marker / Monumental Word Marker */
+.section-marker {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-20);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.section-tagline {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-12);
+  display: block;
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Editorial Links (No rust fill, 0px radius)
+   -------------------------------------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-10);
+  padding: 14px 26px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: var(--border-hairline);
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Primary Button: Solid Black Ink */
+.btn-primary {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+  border-color: var(--color-ink);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-ink);
+}
+
+/* Secondary Button: Hairline Outline */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
+
+/* Rust Panel Variant for Secondary Button */
+.panel-rust .btn-secondary {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  background-color: transparent;
+}
+
+.panel-rust .btn-secondary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
+
+.panel-rust .btn-primary {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
+
+.panel-rust .btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-ink);
+}
+
+/* Editorial underline link */
+.link-editorial {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.link-editorial:hover {
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  border-bottom: var(--border-hairline);
+  background-color: var(--color-bone);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px var(--spacing-20);
+  gap: var(--spacing-20);
+}
+
+.brand-logo {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.brand-logo span {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  display: block;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: border-color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  border-color: var(--color-ink);
+}
+
+.header-cta .btn {
+  padding: 8px 18px;
+  font-size: 12px;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: var(--border-hairline);
+  padding: 6px 12px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Layout Containers & Grid Systems
+   -------------------------------------------------------------------------- */
+.section {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  border-bottom: var(--border-hairline);
+}
+
+.section-hero {
+  padding-top: 40px;
+  padding-bottom: var(--section-gap);
+  border-bottom: var(--border-hairline);
+}
+
+.container-pad {
+  padding-left: var(--spacing-20);
+  padding-right: var(--spacing-20);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section Layout
+   -------------------------------------------------------------------------- */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Imagery — Full-Bleed & Contact Sheet
+   -------------------------------------------------------------------------- */
+.image-frame {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: var(--border-hairline);
+}
+
+.image-full-bleed {
+  width: 100%;
+  height: clamp(380px, 60vh, 650px);
+  object-fit: cover;
+  display: block;
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+/* Contact sheet grid: full height images, equal columns, 0px gap, each image with 1px border */
+.contact-sheet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.contact-sheet-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.contact-sheet-item {
+  border-right: var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bone);
+}
+
+.contact-sheet-item:last-child {
+  border-right: none;
+}
+
+.contact-sheet-item img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-sheet-caption {
+  padding: var(--spacing-12) var(--spacing-20);
+  border-top: var(--border-hairline);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+}
+
+/* --------------------------------------------------------------------------
+   Editorial Content Grids
+   -------------------------------------------------------------------------- */
+.editorial-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.editorial-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.editorial-card {
+  border-top: var(--border-hairline);
+  padding-top: var(--spacing-20);
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-card-number {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  opacity: 0.6;
+  margin-bottom: var(--spacing-10);
+  display: block;
+}
+
+.editorial-card h3 {
+  font-size: 22px;
+  margin-bottom: var(--spacing-12);
+  line-height: 1.25;
+}
+
+.editorial-card p {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Rust Panels (Full-Bleed Terracotta Section)
+   -------------------------------------------------------------------------- */
+.panel-rust {
+  background-color: var(--color-rust);
+  color: var(--color-ink);
+  padding: var(--section-gap) var(--spacing-20);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+  width: 100%;
+}
+
+.panel-rust-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trust-item {
+  border-top: var(--border-hairline);
+  padding-top: 14px;
+}
+
+.trust-item-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Portfolio Filter Tabs & Grid
+   -------------------------------------------------------------------------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: var(--border-hairline);
+  padding: 8px 18px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.25s ease;
+}
+
+.portfolio-item.hidden {
+  display: none;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  border: var(--border-hairline);
+}
+
+.portfolio-info {
+  margin-top: var(--spacing-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: var(--border-hairline);
+  padding-bottom: 8px;
+}
+
+.portfolio-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+}
+
+.portfolio-cat {
+  font-size: 13px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Forms & Contact Details
+   -------------------------------------------------------------------------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-block {
+  border-top: var(--border-hairline);
+  padding-top: 16px;
+}
+
+.contact-block h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: transparent;
+  border: var(--border-hairline);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: border-width 0.1s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-width: 2px;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-success-message {
+  display: none;
+  padding: 20px;
+  border: var(--border-hairline);
+  background-color: var(--color-bone);
+  font-size: 15px;
+  line-height: 1.4;
+  margin-top: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   Site Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  margin-top: auto;
+  background-color: var(--color-bone);
+  border-top: var(--border-hairline);
+  padding: 50px var(--spacing-20) 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+  transition: border-color 0.15s ease;
+}
+
+.footer-links a:hover {
+  border-color: var(--color-ink);
+}
+
+.footer-bottom {
+  border-top: var(--border-hairline);
+  padding-top: var(--spacing-20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .contact-sheet {
+    grid-template-columns: 1fr;
+  }
+  .contact-sheet-2col {
+    grid-template-columns: 1fr;
+  }
+  .contact-sheet-item {
+    border-right: none;
+    border-bottom: var(--border-hairline);
+  }
+  .contact-sheet-item:last-child {
+    border-bottom: none;
+  }
+  .contact-sheet-item img {
+    height: 380px;
+  }
+  .editorial-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .editorial-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .panel-rust-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .portfolio-item img {
+    height: 340px;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header-inner {
+    padding: 14px 16px;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bone);
+    border-bottom: var(--border-hairline);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .header-cta {
+    display: none;
+  }
+  .container-pad {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
